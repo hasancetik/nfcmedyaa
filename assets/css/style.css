@@ -1,0 +1,115 @@
+:where([class^="ri-"])::before {
+    content: "\f3c2";
+}
+
+.nav-link {
+    @apply relative hover:text-[#1f2d55] transition-colors;
+}
+
+.nav-link::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-0 h-0.5 bg-[#1f2d55] transition-all duration-300;
+}
+
+.nav-link:hover::after {
+    @apply w-full;
+}
+
+.service-card {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-gradient {
+    animation: gradient 3s ease infinite;
+    background-size: 200% auto;
+}
+
+.perspective {
+    perspective: 1000px;
+}
+
+.rotate-y-180 {
+    transform: rotateY(180deg);
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    /* border-right: 2px solid white; */
+    animation:
+        typewriter 2.5s steps(44) 0.5s 1 normal both;
+    /* blinkCursor 500ms steps(44) infinite; */
+    animation-delay: 0.5s, 3s;
+    animation-duration: 2.5s, 1s;
+    animation-iteration-count: 1, 1;
+    animation-fill-mode: forwards, forwards;
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: white;
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+#mobileMenu {
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+}
+
+#carousel {
+    margin: 0 60px;
+    /* Sol ve sağda butonlar kadar boşluk */
+    overflow: hidden;
+}
+
+.nav-link {
+    position: relative;
+    padding-bottom: 0.25rem;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #9d181a;
+    transition: width 0.3s ease;
+}
+.nav-link:hover{
+    color:#9d181a;
+}
+.nav-link:hover::after {
+    width: 100%;
+}

@@ -2,9 +2,9 @@
 declare(strict_types=1);
 
 $host = 'localhost';
-$dbname = 'u738369617_nfc';
-$username = 'u738369617_nfc';
-$password = 'pqS+a:Dh0';
+$dbname = 'nfc';
+$username = '';
+$password = '';
 
 $dsn = "mysql:host={$host};dbname={$dbname};charset=utf8mb4";
 

@@ -1,0 +1,17 @@
+User-agent: *
+
+Allow: /
+
+Disallow: /admin/
+Disallow: /admin
+Disallow: /config/
+Disallow: /includes/
+Disallow: /vendor/
+Disallow: /logs/
+Disallow: /tmp/
+Disallow: /cache/
+
+Disallow: /*?page=
+Disallow: /*&page=
+
+Sitemap: https://www.nfcmedya.com.tr/sitemap.xml
